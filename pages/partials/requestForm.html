@@ -1,0 +1,58 @@
+<div class="content">
+    <h2 class="content-head is-center">Request an Appointment</h2>
+    <span ng-show="formCtrl.errorMessage">{{errorMessage}}</span>
+
+    <div class="pure-g">
+        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+            <form id="requestForm" class="pure-form pure-form-stacked" ng-submit="formCtrl.createAppointment()">
+                <fieldset>
+
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" ng-model="formCtrl.formInfo.firstName" type="text" placeholder="First Name">
+
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" ng-model="formCtrl.formInfo.lastName" type="text" placeholder="Last Name">
+
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" ng-model="formCtrl.formInfo.phone" type="tel" placeholder="Daytime Phone Number">
+
+                    <label for="email">Email</label>
+                    <input id="email" ng-model="formCtrl.formInfo.email" type="email" placeholder="Email">
+
+                    <label for="specialty">Specialty</label>
+                    <select id="specialty" ng-model="formCtrl.formInfo.specialty">
+                        <option value="">Select a Speciality</option>
+                        <option>Cardiology</option>
+                        <option>Dermatology</option>
+                        <option>Family Medicine</option>
+                        <option>General Surgery</option>
+                        <option>Nephrology</option>
+                        <option>Neurology</option>
+                        <option>Obstetrics & Gynecology</option>
+                        <option>Oncology</option>
+                        <option>Orthopedic Surgery</option>
+                        <option>Rheumatology</option>
+                    </select>
+
+                    <label for="appointmentDate">Date</label>
+                    <input id="appointmentDate" ng-model="formCtrl.formInfo.appointmentDate" type="date" placeholder="Email">
+
+                    <label for="appointmentTime">Time</label>
+                    <select id="appointmentTime" ng-model="formCtrl.formInfo.appointmentTime">
+                        <option value="">Select a time</option>
+                        <option value="9">9:00 am</option>
+                        <option value="10">10:00 am</option>
+                        <option value="11">11:00 am</option>
+                        <option value="2">2:00 pm</option>
+                        <option value="3">3:00 pm</option>
+                        <option value="4">4:00 pm</option>
+                    </select>
+
+                    <input id="submitRequest" type="submit" class="pure-button"/>
+                </fieldset>
+                <span>{{formInfo}}</span>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "safeHandsClient",
+  "version": "1.0.0",
+  "description": "SafeHandsClient",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akila",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.2"
+  }
+}
